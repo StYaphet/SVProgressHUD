@@ -447,7 +447,8 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
             hudWidth += 24.0f;
         } else {
             hudWidth += 24.0f;
-            labelRect = CGRectMake(0.0f, labelRectY, hudWidth, stringHeight);
+            CGFloat labelRectX = (hudWidth - stringWidth) / 2;
+            labelRect = CGRectMake(labelRectX, labelRectY, stringWidth, stringHeight);
         }
     }
     
